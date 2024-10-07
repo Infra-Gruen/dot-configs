@@ -1,4 +1,18 @@
-format = "$time$username$sudo[@](cyan)$hostname$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$terraform$cmd_duration$azure\n$kubernetes\n$character"
+format = """
+$time$username$sudo[@](cyan)$hostname$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$docker_context\
+$terraform\
+$golang\
+$python\
+${custom.ansible}\
+$cmd_duration\
+$azure\n$kubernetes\n$character
+"""
 
 add_newline = false
 command_timeout = 2000
@@ -43,3 +57,23 @@ style = "blue"
 [kubernetes]
 disabled = false
 format = '[├](fg:2) [$symbol$context( \($namespace\)) ]($style)'
+
+[custom.ansible]
+disabled = false
+symbol = '󱂚'
+description = 'Ansible Core version'
+detect_files = ['ansible.cfg']
+style = 'red'
+format = 'via [$symbol]($style) [$output]($style bold) '
+shell = '/bin/bash'
+command = 'echo -n $(ansible --version 2>/dev/null | grep -oP "(?<=core )[\d\.]+")'
+
+[golang]
+symbol = ''
+style = 'fg:#00ADD8'
+format = 'via [$symbol]($style) [$version]($style bold) '
+
+[python]
+symbol = ''
+style = 'yellow'
+format = 'via [$symbol]($style) [$version]($style bold) '
