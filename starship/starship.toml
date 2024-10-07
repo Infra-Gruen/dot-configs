@@ -1,0 +1,45 @@
+format = "$time$username$sudo[@](cyan)$hostname$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$terraform$cmd_duration$azure\n$kubernetes\n$character"
+
+add_newline = false
+command_timeout = 2000
+
+[username]
+style_user = "fg:2"
+style_root = "red bold"
+format = "[$user]($style)"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname](cyan) "
+
+[directory]
+truncation_length = 0
+style = "cyan"
+
+[character]
+success_symbol = "[└─▶ \\$](fg:2) "
+error_symbol = "[└─▶ \\$](red) "
+
+[terraform]
+format = "\\(tf-ws [$symbol$workspace]($style)\\) "
+
+[time]
+disabled = true
+format = "🕙 [$time]($style) "
+style = "fg:11"
+
+[sudo]
+disabled = true
+format = "[ as $symbol]($style)"
+style = "white"
+
+[azure]
+disabled = false
+symbol = "☁️ "
+format = "[\n[├](fg:2) $symbol($subscription) ]($style)"
+style = "blue"
+
+[kubernetes]
+disabled = false
+format = '[├](fg:2) [$symbol$context( \($namespace\)) ]($style)'
