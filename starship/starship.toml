@@ -55,6 +55,7 @@ format = "[\n[├](fg:2) $symbol($subscription) ]($style)"
 style = "blue"
 
 [kubernetes]
+symbol = "☸"
 disabled = false
 format = '[├](fg:2) [$symbol$context( \($namespace\)) ]($style)'
 
