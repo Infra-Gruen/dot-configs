@@ -3,4 +3,4 @@ if status is-interactive
 end
 
 starship init fish | source
-fuck --alias | source 
+thefuck --alias | source 
