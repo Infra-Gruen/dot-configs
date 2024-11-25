@@ -36,7 +36,10 @@ success_symbol = "[└─▶ \\$](fg:2) "
 error_symbol = "[└─▶ \\$](red) "
 
 [terraform]
-format = "\\(tf-ws [$symbol$workspace]($style)\\) "
+symbol = '󱁢'
+format = "via [$symbol]($style) [$version]($style bold) \\(tf-ws [$symbol $workspace]($style)\\)"
+style = 'fg:#7B42BC'
+detect_extensions = []
 
 [time]
 disabled = true
