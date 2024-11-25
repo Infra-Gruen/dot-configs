@@ -67,7 +67,7 @@ detect_files = ['ansible.cfg']
 style = 'red'
 format = 'via [$symbol]($style) [$output]($style bold) '
 shell = '/bin/bash'
-command = 'echo -n $(ansible --version 2>/dev/null | grep -oP "(?<=core )[\d\.]+")'
+command = 'echo -n $(ansible --version 2>/dev/null | perl -nle "print $1 if /core (\d+\.\d+\.\d+)/")'
 
 [golang]
 symbol = ''
