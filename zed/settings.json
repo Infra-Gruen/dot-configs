@@ -224,6 +224,33 @@
     // Existing terminals will not pick up this change until they are recreated.
     "max_scroll_history_lines": 10000
   },
+  // The key to use for adding multiple cursors
+  // Currently "alt" or "cmd_or_ctrl"  (also aliased as
+  // "cmd" and "ctrl") are supported.
+  "multi_cursor_modifier": "alt",
+  // Whether to enable vim modes and key bindings.
+  "vim_mode": false,
+  // Whether to show the informational hover box when moving the mouse
+  // over symbols in the editor.
+  "hover_popover_enabled": true,
+  // Whether to confirm before quitting Zed.
+  "confirm_quit": false,
+  // Whether to restore last closed project when fresh Zed instance is opened.
+  "restore_on_startup": "last_session",
+  // Size of the drop target in the editor.
+  "drop_target_size": 0.2,
+  // Whether the window should be closed when using 'close active item' on a window with no tabs.
+  // May take 3 values:
+  //  1. Use the current platform's convention
+  //         "when_closing_with_no_tabs": "platform_default"
+  //  2. Always close the window:
+  //         "when_closing_with_no_tabs": "close_window",
+  //  3. Never close the window
+  //         "when_closing_with_no_tabs": "keep_window_open",
+  "when_closing_with_no_tabs": "platform_default",
+
+  "show_whitespaces": "selection",
+  // Settings related to calls in Zed
   "code_actions_on_format": {},
   /// Settings related to running tasks.
   "tasks": {
