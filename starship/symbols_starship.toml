@@ -71,8 +71,7 @@ symbol = " "
 symbol = "󰍛 "
 
 [meson]
-symbol = "󰔷 "[aws]
-symbol = "  "
+symbol = "󰔷 "
 
 [buf]
 symbol = " "
