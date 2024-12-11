@@ -1,0 +1,10 @@
+{
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.external.osxExec": "WezTerm.app",
+  "ansible.validation.lint.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.autoReplies": {}
+}
