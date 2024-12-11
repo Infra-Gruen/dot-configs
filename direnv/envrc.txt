@@ -1,0 +1,6 @@
+# Generic direnv config for private projects. Rename to ".envrc"
+# Git CLI
+export GIT_AUTHOR_EMAIL="<see-profile>@users.noreply.github.com"
+export GIT_AUTHOR_NAME="Infra-Gruen"
+export GIT_COMMITTER_EMAIL="<see-profile>@users.noreply.github.com"
+export GIT_COMMITTER_NAME="Infra-Gruen"
