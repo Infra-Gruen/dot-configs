@@ -3,5 +3,6 @@ if status is-interactive
 end
 
 starship init fish | source
-thefuck --alias | source 
+thefuck --alias | source
 direnv hook fish | source
+alias ee='eza -lah'
